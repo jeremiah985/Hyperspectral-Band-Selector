@@ -23,5 +23,14 @@
 3，降维选择，目标检测，图像分类逻辑上十分混乱
 <img width="1491" height="984" alt="image" src="https://github.com/user-attachments/assets/c05badc1-a97b-4928-95cc-1aa04d46d08c" />
 
+## v3.2
+#### 2026.3.4
+针对3.1版本的问题进行了优化，增加了标签图的读取与可视化展示，同时完成了数据展示的放大缩小等功能
+同时用pca的基础方法进行了一个demo的演示，目前看起来效果还不错
+
+<img width="1701" height="1203" alt="image" src="https://github.com/user-attachments/assets/f1622419-6126-4d89-98f9-a7cceb372b83" />
+
+
+
 
 
