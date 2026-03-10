@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>相关知识.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95%E7%89%88-%E8%AE%BA%E6%96%87%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E9%97%AE%E7%AD%94">考研复试版-论文核心概念问答</h1>
+<h3 id="1-%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%BB%93%E6%9E%84%E6%95%B0%E6%8D%AE%E5%92%8C%E9%9D%9E%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%BB%93%E6%9E%84%E6%95%B0%E6%8D%AE">1. 欧几里得结构数据和非欧几里得结构数据</h3>
+<p>欧式数据是<strong>结构规整、维度固定</strong>的数，比如图像的像素网格、光谱序列向量，相邻区域是提前定好的，用CNN就能处理；非欧式数据没有规整结构，一般是<strong>节点+边</strong>的图形式，比如高光谱的各个波段是节点，波段间的相关性是边，节点间的关联动态变化，没法用欧式规则处理，得用GCN这类图网络。
+在这篇论文里，高光谱影像的像素网格是欧式数据，而波段间的不规则关联结构就是非欧式数据，这也是研究中用GCN的原因。</p>
+<h3 id="2-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%BE%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9Cgcn">2. 什么是图卷积网络（GCN）</h3>
+<p>GCN是专门处理<strong>非欧几里得图结构数据</strong>的深度学习网络，核心是把CNN的卷积思想适配到不规则的图上。
+简单说，它会给图里的每个节点，<strong>融合自身特征和相邻节点的特征</strong>，还会根据节点间关联的强弱分配不同权重，这样就能挖掘出节点间局部和全局的关联规律。
+论文里就是把每个光谱波段当作节点，波段间的相关性当作边，用GCN聚合相关波段的特征，精准捕捉波段间的复杂关联，弥补CNN的不足。</p>
+<h3 id="3-%E4%BB%80%E4%B9%88%E6%98%AF%E6%84%9F%E5%8F%97%E9%87%8E%E4%BB%A5%E5%8F%8Acnn%E5%9B%BA%E5%AE%9A%E6%84%9F%E5%8F%97%E9%87%8E%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7">3. 什么是感受野，以及CNN固定感受野的局限性</h3>
+<p>感受野就是CNN提取特征时的<strong>固定视野</strong>，指网络某一层的输出特征点，对应到原始输入数据上的覆盖范围，比如3×3卷积核的感受野就是原始数据上3×3的区域，范围由网络参数提前定好，训练和使用时不会变。
+它的局限性在论文里很明显：用CNN处理高光谱波段时，只能按固定范围提取波段特征，没法灵活适配波段间复杂的关联——比如两个不相邻但相关性极强的波段，CNN的固定视野覆盖不到，就捕捉不到这种关键关联；而GCN没有固定感受野的限制，能根据波段实际的相关程度，动态聚合任意关联波段的特征，更适合处理波段的非欧几里得结构数据。</p>
+<h3 id="4%E4%BB%80%E4%B9%88%E6%98%AF%E8%B0%B1%E8%81%9A%E7%B1%BB">4.什么是谱聚类</h3>
+<p>谱聚类就是<strong>把“聚类问题”转化成“图的切图问题”<strong>的一种聚类方法，核心思路是先把所有待聚类的样本（比如论文里的光谱波段）构建成一张图，再通过切割这张图，让</strong>同一个子图内的样本关联紧密、不同子图间的样本关联稀疏</strong>，每个子图就是一个聚类结果，简单说就是**“把关系近的样本划到一伙，关系远的分开”**。</p>
+<h4 id="%E4%B8%BA%E5%95%A5%E5%BE%88%E5%A4%9A%E6%B3%A2%E6%AE%B5%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95%E6%9C%80%E5%90%8E%E9%83%BD%E7%94%A8%E8%B0%B1%E8%81%9A%E7%B1%BB">为啥很多波段选择方法最后都用谱聚类？</h4>
+<p>高光谱波段选择的核心需求是<strong>选代表性波段、去冗余</strong>，而谱聚类相比K-means等传统聚类，<strong>对不规则分布的样本（比如波段这种非欧几里得结构）聚类效果更好</strong>，且能自然贴合GCN输出的<strong>图结构数据</strong>（GCN最后会得到波段间的邻接矩阵，刚好是谱聚类的输入），不用额外转换数据，这也是它成为高光谱波段选择“标配收尾方法”的关键。</p>
+<h4 id="%E7%AE%80%E6%B4%81%E7%89%88">简洁版</h4>
+<p>谱聚类就是先把样本建成图，再把图切成“内部关系近、外部关系远”的子图，每个子图就是一个聚类；在高光谱波段选择里，它能完美适配GCN输出的波段图结构，把相似波段聚在一起，最后选代表波段，所以很多方法都会用它收尾。</p>
+
+</body>
+</html>
