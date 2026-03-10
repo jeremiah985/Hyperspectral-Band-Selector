@@ -30,6 +30,12 @@
 
 <img width="1701" height="1203" alt="image" src="https://github.com/user-attachments/assets/f1622419-6126-4d89-98f9-a7cceb372b83" />
 
+## v4.0
+#### 2026.3.10~3.11
+进行了一个模块化的重构，便于后续添加算法模块和分类器模块，同时尝试了nanobanana进行科研绘图的尝试
+<img width="1376" height="768" alt="Gemini_Generated_Image_hcajt5hcajt5hcaj" src="https://github.com/user-attachments/assets/35aa8c9c-a8c4-4850-b7b3-515036592b3f" />
+
+
 
 
 
