@@ -35,6 +35,11 @@
 进行了一个模块化的重构，便于后续添加算法模块和分类器模块，同时尝试了nanobanana进行科研绘图的尝试
 <img width="1376" height="768" alt="Gemini_Generated_Image_hcajt5hcajt5hcaj" src="https://github.com/user-attachments/assets/35aa8c9c-a8c4-4850-b7b3-515036592b3f" />
 
+## v5.0
+#### 2026.3.25
+完成了项目的开题报告，同时上传到维普论文平台
+把使用matlab语言写的代码改写为Python语言，同时整合到algorithm模块，不同算法测试均可以正确进行，但是对于前端界面仍然不满意。
+
 
 
 
